@@ -82,10 +82,10 @@ export default function AboutSection() {
         {/* Stats with hover micro-interactions */}
         <div className="mt-16 grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
           {[
-            { value: '150+', label: 'Projects Delivered' },
+            { value: '15+', label: 'Projects Delivered' },
             { value: '98%', label: 'Client Retention' },
-            { value: '£12M', label: 'Revenue Generated' },
-            { value: '40+', label: 'Team Members' },
+            { value: '1M+', label: 'End-Users Reached' },
+            { value: '10+', label: 'Team Members' },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}

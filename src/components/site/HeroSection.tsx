@@ -212,7 +212,7 @@ export default function HeroSection() {
     >
       <StarField />
 
-      {/* Grain overlay
+      {/* Grain overlay */}
       <div
         className="pointer-events-none absolute inset-0 z-10 opacity-[0.035]"
         style={{
@@ -220,7 +220,7 @@ export default function HeroSection() {
           backgroundRepeat: 'repeat',
           backgroundSize: '128px 128px',
         }}
-      /> */}
+      />
 
       <AnimatedArcPath />
 

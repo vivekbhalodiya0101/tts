@@ -10,8 +10,9 @@ const projects = [
       'A next-gen mobile banking experience with biometric auth and real-time analytics.',
     type: 'project' as const,
     color: 'from-accent/20 to-accent/5',
-    span: 'md:col-span-2 md:row-span-2',
-    aspect: 'aspect-[4/3]',
+    span: 'md:col-start-1 md:row-start-1 md:row-span-5',
+    image:
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
   },
   {
     title: 'Meridian E-Commerce',
@@ -21,8 +22,9 @@ const projects = [
       'Full-stack e-commerce platform handling 100K+ daily transactions.',
     type: 'case-study' as const,
     color: 'from-blue-500/15 to-blue-500/5',
-    span: 'md:col-span-1',
-    aspect: 'aspect-square',
+    span: 'md:col-start-2 md:row-start-1 md:row-span-3',
+    image:
+      'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80',
   },
   {
     title: 'Atlas Health Platform',
@@ -32,8 +34,9 @@ const projects = [
       'HIPAA-compliant telemedicine platform connecting patients with providers.',
     type: 'project' as const,
     color: 'from-emerald-500/15 to-emerald-500/5',
-    span: 'md:col-span-1',
-    aspect: 'aspect-square',
+    span: 'md:col-start-2 md:row-start-4 md:row-span-2',
+    image:
+      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80',
   },
   {
     title: 'Nexus CRM Dashboard',
@@ -43,8 +46,9 @@ const projects = [
       'Enterprise CRM with AI-powered insights and pipeline visualization.',
     type: 'case-study' as const,
     color: 'from-orange-500/15 to-orange-500/5',
-    span: 'md:col-span-1',
-    aspect: 'aspect-[3/2]',
+    span: 'md:col-start-3 md:row-start-1 md:row-span-2',
+    image:
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
   },
   {
     title: 'Vortex Analytics',
@@ -53,9 +57,10 @@ const projects = [
     description:
       'Real-time analytics dashboard processing millions of events per second.',
     type: 'project' as const,
-    color: 'from-blue-500/15 to-blue-500/5',
-    span: 'md:col-span-2',
-    aspect: 'aspect-[3/2]',
+    color: 'from-purple-500/15 to-purple-500/5',
+    span: 'md:col-start-3 md:row-start-3 md:row-span-3',
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
 ]
 
@@ -92,11 +97,11 @@ export default function ProjectsSection() {
         </div>
 
         {/* Asymmetric Bento Grid */}
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3 md:grid-rows-5 md:min-h-[850px] lg:min-h-[900px]">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
-              className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-border/80 transition-all duration-500 hover:border-accent/20 hover:shadow-glow-md ${project.span}`}
+              className={`group relative flex flex-col cursor-pointer overflow-hidden rounded-2xl border border-border/80 transition-all duration-500 hover:border-accent/20 hover:shadow-glow-md bg-background ${project.span}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,13 +111,13 @@ export default function ProjectsSection() {
               whileHover={{ y: -6, transition: { duration: 0.4 } }}
             >
               <div
-                className={`${project.aspect} bg-gradient-to-br ${project.color} relative flex items-center justify-center p-6 transition-all duration-700 group-hover:scale-[1.02]`}
+                className={`flex-1 min-h-[220px] bg-linear-to-br ${project.color} relative flex items-center justify-center p-6 transition-transform duration-700 overflow-hidden`}
               >
-                <div className="flex h-full w-full items-center justify-center rounded-xl border border-border/30 bg-background/40 backdrop-blur-sm">
-                  <span className="font-heading text-xl font-bold text-foreground/20 lg:text-2xl">
-                    {project.title.split(' ')[0]}
-                  </span>
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 h-full w-full object-cover opacity-95 transition-transform duration-700 group-hover:scale-110"
+                />
 
                 {/* Type badge */}
                 <div className="absolute top-4 right-4">

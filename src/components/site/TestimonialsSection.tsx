@@ -11,12 +11,12 @@ import {
 const testimonials = [
   {
     quote:
-      'Working with TTS transformed our brand. Their strategic approach and obsessive attention to detail elevated our online presence — leading to a 300% increase in engagement within the first quarter.',
+      'Working with TTS transformed our brand. Their strategic approach and obsessive attention to detail elevated our online presence — leading to a 150% increase in engagement within the first quarter.',
     name: 'Sarah Mitchell',
     role: 'Group Marketing Manager',
     company: 'Finova Labs',
     initials: 'SM',
-    metric: '+300%',
+    metric: '+150%',
     metricLabel: 'Engagement lift',
     accent: 'from-[oklch(0.7_0.2_245)] to-[oklch(0.45_0.22_245)]',
   },
@@ -38,7 +38,7 @@ const testimonials = [
     role: 'Head of Product',
     company: 'Meridian Commerce',
     initials: 'EC',
-    metric: '12M+',
+    metric: '20K+',
     metricLabel: 'Monthly users served',
     accent: 'from-[oklch(0.7_0.18_220)] to-[oklch(0.5_0.2_245)]',
   },
