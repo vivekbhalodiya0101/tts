@@ -17,7 +17,7 @@ import {
 } from 'motion/react'
 
 import kimalImg from '../assets/images/kimal.jpeg'
-import vivekImg from '../assets/images/vivek.jpeg'
+// import vivekImg from '../assets/images/vivek.jpeg'
 
 const team = [
   {
@@ -36,38 +36,38 @@ const team = [
       instagram: '#',
     },
   },
-  {
-    name: 'Vivek Bhalodiya',
-    role: 'Co-Founder & Creative Director',
-    initials: 'VB',
-    image: vivekImg,
-    tagline: 'Craft · Brand · Identity',
-    bio: 'Translates strategy into expressive systems. Award-winning visual director with a relentless eye for detail and motion.',
-    skills: ['Brand', 'Design Systems', 'Motion'],
-    accent: 'from-[oklch(0.75_0.18_240)] to-[oklch(0.55_0.22_260)]',
-    index: '02',
-    socials: {
-      twitter: '#',
-      linkedin: '#',
-      instagram: '#',
-    },
-  },
-  {
-    name: 'Tirth Ladani',
-    role: 'Web Engineer & Developer',
-    initials: 'TL',
-    image: null,
-    tagline: 'Architecture · Performance · Scale',
-    bio: 'Engineers the invisible — performant, resilient platforms that disappear into the experience. Edge, real-time, and everything in between.',
-    skills: ['TypeScript', 'Edge', 'Infra'],
-    accent: 'from-[oklch(0.7_0.18_220)] to-[oklch(0.5_0.2_245)]',
-    index: '03',
-    socials: {
-      twitter: '#',
-      linkedin: '#',
-      instagram: '#',
-    },
-  },
+  // {
+  //   name: 'Vivek Bhalodiya',
+  //   role: 'Co-Founder & Creative Director',
+  //   initials: 'VB',
+  //   image: vivekImg,
+  //   tagline: 'Craft · Brand · Identity',
+  //   bio: 'Translates strategy into expressive systems. Award-winning visual director with a relentless eye for detail and motion.',
+  //   skills: ['Brand', 'Design Systems', 'Motion'],
+  //   accent: 'from-[oklch(0.75_0.18_240)] to-[oklch(0.55_0.22_260)]',
+  //   index: '02',
+  //   socials: {
+  //     twitter: '#',
+  //     linkedin: '#',
+  //     instagram: '#',
+  //   },
+  // },
+  // {
+  //   name: 'Tirth Ladani',
+  //   role: 'Web Engineer & Developer',
+  //   initials: 'TL',
+  //   image: null,
+  //   tagline: 'Architecture · Performance · Scale',
+  //   bio: 'Engineers the invisible — performant, resilient platforms that disappear into the experience. Edge, real-time, and everything in between.',
+  //   skills: ['TypeScript', 'Edge', 'Infra'],
+  //   accent: 'from-[oklch(0.7_0.18_220)] to-[oklch(0.5_0.2_245)]',
+  //   index: '03',
+  //   socials: {
+  //     twitter: '#',
+  //     linkedin: '#',
+  //     instagram: '#',
+  //   },
+  // },
 ]
 
 function TeamCard({ member, i }: { member: (typeof team)[number]; i: number }) {
@@ -305,6 +305,236 @@ function TeamCard({ member, i }: { member: (typeof team)[number]; i: number }) {
   )
 }
 
+function TeamCardHorizontal({ member, i }: { member: (typeof team)[number]; i: number }) {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const [hovered, setHovered] = useState(false)
+
+  const mx = useMotionValue(0.5)
+  const my = useMotionValue(0.5)
+  const rx = useSpring(useTransform(my, [0, 1], [4, -4]), {
+    stiffness: 150,
+    damping: 18,
+  })
+  const ry = useSpring(useTransform(mx, [0, 1], [-4, 4]), {
+    stiffness: 150,
+    damping: 18,
+  })
+
+  const glowX = useTransform(mx, (v) => `${v * 100}%`)
+  const glowY = useTransform(my, (v) => `${v * 100}%`)
+  const glowBg = useMotionTemplate`radial-gradient(600px circle at ${glowX} ${glowY}, oklch(0.546 0.245 245 / 0.12), transparent 60%)`
+
+  const handleMove = (e: MouseEvent<HTMLDivElement>) => {
+    const rect = cardRef.current?.getBoundingClientRect()
+    if (!rect) return
+    mx.set((e.clientX - rect.left) / rect.width)
+    my.set((e.clientY - rect.top) / rect.height)
+  }
+
+  return (
+    <motion.div
+      ref={cardRef}
+      className="group relative w-full"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ delay: i * 0.12, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => {
+        setHovered(false)
+        mx.set(0.5)
+        my.set(0.5)
+      }}
+      onMouseMove={handleMove}
+      style={{ perspective: 1500 }}
+    >
+      <motion.div
+        className="glass-card-light relative overflow-hidden rounded-3xl flex flex-col md:flex-row min-h-100"
+        style={{ rotateX: rx, rotateY: ry, transformStyle: 'preserve-3d' }}
+      >
+        {/* Cursor-following soft glow (reactive) */}
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          style={{ background: glowBg }}
+        />
+
+        {/* Left Box: content */}
+        <div className="relative z-10 flex w-full flex-col justify-center space-y-6 p-8 md:w-[55%] lg:p-12">
+          <div>
+            <h3 className="font-heading text-3xl font-bold leading-tight lg:text-4xl">
+              <span className="text-luminance-light">{member.name}</span>
+            </h3>
+            <p className="mt-2 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+              {member.role}
+            </p>
+          </div>
+
+          {/* Animated divider */}
+          <div className="relative h-px w-full bg-foreground/6">
+            <motion.div
+              className="absolute inset-y-0 left-0 bg-linear-to-r from-transparent via-accent to-transparent"
+              initial={{ width: '0%' }}
+              animate={hovered ? { width: '100%' } : { width: '20%' }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </div>
+
+          <p className="text-base leading-relaxed text-muted-foreground/85">
+            {member.bio}
+          </p>
+
+          {/* Skill chips */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            {member.skills.map((skill, idx) => (
+              <motion.span
+                key={skill}
+                className="rounded-full border border-foreground/8 bg-background px-4 py-1.5 text-xs font-medium text-foreground/70"
+                initial={{ opacity: 0, y: 6 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 + 0.3 + idx * 0.06 }}
+                whileHover={{
+                  y: -2,
+                  borderColor: 'oklch(0.546 0.245 245 / 0.4)',
+                }}
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+
+          {/* Footer row: socials */}
+          <div className="flex items-center gap-3 pt-4">
+            {[
+              {
+                Icon: TwitterIcon,
+                label: 'Twitter',
+                url: member.socials.twitter,
+              },
+              {
+                Icon: Linkedin02Icon,
+                label: 'LinkedIn',
+                url: member.socials.linkedin,
+              },
+              {
+                Icon: InstagramIcon,
+                label: 'Instagram',
+                url: member.socials.instagram,
+              },
+            ].map(({ Icon, label, url }) => (
+              <motion.a
+                key={label}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/8 bg-background/50 text-foreground/50 transition-colors hover:border-accent/40 hover:bg-background hover:text-accent"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <HugeiconsIcon
+                  icon={Icon}
+                  className="h-4 w-4"
+                  strokeWidth={1.8}
+                />
+              </motion.a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Box: portrait area */}
+        <div className="relative h-87.5 w-full overflow-hidden bg-muted/20 md:h-auto md:w-[45%]">
+          {member.image ? (
+            <motion.img
+              src={member.image}
+              alt={member.name}
+              className="absolute inset-0 h-full w-full select-none object-cover object-center grayscale"
+              animate={
+                hovered
+                  ? { scale: 1.05, filter: 'grayscale(0%)' }
+                  : { scale: 1, filter: 'grayscale(100%)' }
+              }
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            />
+          ) : (
+            <motion.div
+              className={`absolute inset-0 bg-linear-to-br ${member.accent}`}
+              animate={hovered ? { scale: 1.05 } : { scale: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            />
+          )}
+
+          {/* Mesh overlay */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-30 mix-blend-overlay"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 30% 20%, white 0%, transparent 40%), radial-gradient(circle at 70% 80%, white 0%, transparent 40%)',
+            }}
+          />
+
+          {member.image && (
+            <div className="pointer-events-none absolute inset-0 bg-black/20 mix-blend-multiply" />
+          )}
+
+          {/* Index badge */}
+          <div className="pointer-events-none absolute right-5 top-5 z-10 flex flex-row-reverse items-center gap-2">
+            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/90 drop-shadow-sm">
+              {member.index}
+            </span>
+            <div className="h-px w-8 bg-white/60 drop-shadow-sm" />
+          </div>
+
+          {/* Hover-reveal sparkle */}
+          <motion.div
+            className="pointer-events-none absolute left-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm"
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={
+              hovered
+                ? { opacity: 1, scale: 1, rotate: 0 }
+                : { opacity: 0, scale: 0.6, rotate: -45 }
+            }
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <HugeiconsIcon
+              icon={SparklesIcon}
+              className="h-4 w-4 text-white"
+              strokeWidth={1.5}
+            />
+          </motion.div>
+
+          {!member.image && (
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <motion.span
+                className="font-heading text-[8rem] font-bold leading-none text-white/95"
+                style={{ textShadow: '0 8px 40px rgba(0,0,0,0.15)' }}
+                animate={hovered ? { y: -8, scale: 1.02 } : { y: 0, scale: 1 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {member.initials}
+              </motion.span>
+            </div>
+          )}
+
+          {/* Tagline ribbon (slides in on hover) */}
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 z-10 px-5 py-3 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-white"
+            style={{
+              background:
+                'linear-gradient(to top, rgba(0,0,0,0.45), transparent)',
+            }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={hovered ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {member.tagline}
+          </motion.div> // Fix extra end tag later. Wait, this aligns with above div right
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 export default function TeamSection() {
   return (
     <section
@@ -356,15 +586,15 @@ export default function TeamSection() {
           </motion.div>
         </div>
 
-        {/* Cards grid - tall vertical cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        {/* Horizontal Cards layout (Centered) */}
+        <div className="mx-auto flex w-full max-w-250 flex-col gap-10">
           {team.map((member, i) => (
-            <TeamCard key={member.name} member={member} i={i} />
+            <TeamCardHorizontal key={member.name} member={member} i={i} />
           ))}
         </div>
 
         {/* Footer note */}
-        <motion.div
+        {/* <motion.div
           className="mt-16 flex flex-col items-center justify-center gap-3 text-center sm:flex-row"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -388,7 +618,7 @@ export default function TeamSection() {
               className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

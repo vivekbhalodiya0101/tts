@@ -72,7 +72,7 @@ export default function Footer() {
         {/* Top row — logo + tagline + email */}
         <div className="flex flex-col gap-8 border-b border-white/6 py-14 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
-            <div className="relative flex h-16 w-48 items-center justify-start overflow-hidden">
+            <div className="relative flex h-18 w-48 items-center justify-start overflow-hidden">
               <img
                 src="/logo-white.png"
                 alt="TTS Cloud"
@@ -87,22 +87,21 @@ export default function Footer() {
               experiences. We transform ambitious ideas into pixel-perfect
               realities.
             </p>
-          </div>
 
-          {/* Email + socials */}
-          <div className="flex flex-col items-start gap-5 lg:items-end">
-            <a
-              href="mailto:hello@techtuitionsystem.com"
-              className="group flex items-center gap-2 font-heading text-xl font-semibold text-white transition-colors duration-300 hover:text-accent"
-            >
-              hello@techtuitionsystem.com
-              <HugeiconsIcon
-                icon={ArrowUpRight01Icon}
-                size={16}
-                className="opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-            <div className="flex gap-2">
+            <h3 className="mt-6 text-lg font-semibold text-white">Give us a Call</h3>
+            <p className=" mt-2 text-md font-thin" style={{ color: 'rgba(180,190,215,0.55)' }}>
+              <a href="tel:+919099003103" className="hover:text-white/80 transition-colors duration-300">
+                +91-9099003103
+              </a>
+              ,
+              <a href="tel:+919099003203" className="hover:text-white/80 transition-colors duration-300">
+                +91-9099003203
+              </a>
+            </p>
+
+            <h3 className="mt-6 text-lg font-semibold text-white">Follow Us</h3>
+            {/* Socials */}
+            <div className="mt-2 flex gap-2">
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -113,6 +112,40 @@ export default function Footer() {
                   {s.label}
                 </a>
               ))}
+            </div>
+          </div>
+
+          {/* Email + map */}
+          <div className="flex w-full flex-col items-start gap-6 lg:w-auto lg:items-end lg:pl-10">
+            <a
+              href="mailto:hello@techtuitionsystem.com"
+              className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
+            >
+              <span className="break-all">hello@techtuitionsystem.com</span>
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={18}
+                className="shrink-0 opacity-40 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+              />
+            </a>
+
+            {/* Aesthetic Mini Map */}
+            <div
+              className="group/map relative h-40 w-full max-w-xs overflow-hidden transition-all duration-500 sm:max-w-sm lg:h-60 lg:w-105 lg:max-w-none"
+              style={{
+                maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%, transparent), linear-gradient(to bottom, transparent, black 15%, black 100%, transparent), linear-gradient(to left, transparent, black 8%, black 100%, transparent), linear-gradient(to top, transparent, black 15%, black 100%, transparent)',
+                WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%, transparent), linear-gradient(to bottom, transparent, black 15%, black 100%, transparent), linear-gradient(to left, transparent, black 8%, black 100%, transparent), linear-gradient(to top, transparent, black 15%, black 100%, transparent)',
+                maskComposite: 'intersect',
+                WebkitMaskComposite: 'source-in',
+              }}
+            >
+              <iframe
+                title="Tech Tuition System Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.123!2d70.2672543!3d21.7556165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3957f3c01797f721%3A0x492c4331111f3759!2sTech%20Tuition%20System%20LLP!5e0!3m2!1sen!2sin!4v1706500000000!5m2!1sen!2sin"
+                className="absolute inset-0 h-full w-full border-0 opacity-60 grayscale invert transition-all duration-700 group-hover/map:scale-103 group-hover/map:opacity-100 group-hover/map:grayscale-0 group-hover/map:invert-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
