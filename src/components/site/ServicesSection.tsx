@@ -249,7 +249,7 @@ export default function ServicesSection() {
                 border: 'none',
               }}
             >
-              <span className="absolute inset-0 -translate-x-full rounded-full bg-gradient-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center gap-3">
                 Explore Our Services
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-[11px] text-primary-foreground transition-transform duration-300 group-hover:translate-x-0.5">
@@ -265,7 +265,7 @@ export default function ServicesSection() {
       <AnimatePresence>
         {modalService && (
           <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -357,7 +357,7 @@ export default function ServicesSection() {
                     aria-label="Close"
                     variant="ghost"
                     size="icon"
-                    className="h-9 w-9 shrink-0 rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white sm:h-10 sm:w-10 hover:rotate-90 duration-300"
+                    className="h-9 w-9 shrink-0 rounded-full border border-white/10 bg-white/3 text-white/60 transition-all hover:border-white/20 hover:bg-white/6 hover:text-white sm:h-10 sm:w-10 hover:rotate-90 duration-300"
                   >
                     <HugeiconsIcon icon={Cancel01Icon} size={14} />
                   </Button>

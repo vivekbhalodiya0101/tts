@@ -70,7 +70,7 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Top row — logo + tagline + email */}
-        <div className="flex flex-col gap-8 border-b border-white/6 py-14 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-8 justify-center items-center border-b border-white/6 py-14 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
             <div className="relative flex h-18 w-48 items-center justify-start overflow-hidden">
               <img
@@ -93,7 +93,7 @@ export default function Footer() {
               <a href="tel:+919099003103" className="hover:text-white/80 transition-colors duration-300">
                 (+91) 90990 03103
               </a>
-              ,
+              , 
               <a href="tel:+919099003203" className="hover:text-white/80 transition-colors duration-300">
                 (+91) 90990 03203
               </a>
@@ -121,12 +121,22 @@ export default function Footer() {
           </div>
 
           {/* Email + map */}
-          <div className="flex w-full flex-col items-start gap-6 lg:w-auto lg:items-end lg:pl-10">
+          <div className="flex w-full flex-col items-center gap-3 lg:w-auto lg:items-end lg:pl-10">
             <a
               href="mailto:hello@techtuitionsystem.com"
               className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
             >
               <span className="break-all">hr@techtuitionsystem.com</span>
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={18}
+                className="shrink-0 opacity-40 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+              />
+            </a>
+            <a
+              href="mailto:hello@techtuitionsystem.com"
+              className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
+            >
               <span className="break-all">support@techtuitionsystem.com</span>
               <HugeiconsIcon
                 icon={ArrowUpRight01Icon}
@@ -137,7 +147,7 @@ export default function Footer() {
 
             {/* Aesthetic Mini Map */}
             <div
-              className="group/map relative h-40 w-full max-w-xs overflow-hidden transition-all duration-500 sm:max-w-sm lg:h-60 lg:w-105 lg:max-w-none"
+              className="group/map relative h-40 w-full mt-6 max-w-xs overflow-hidden transition-all duration-500 sm:max-w-sm lg:h-72 lg:w-120 lg:max-w-none"
               style={{
                 maskImage: 'linear-gradient(to right, transparent, black 8%, black 100%, transparent), linear-gradient(to bottom, transparent, black 15%, black 100%, transparent), linear-gradient(to left, transparent, black 8%, black 100%, transparent), linear-gradient(to top, transparent, black 15%, black 100%, transparent)',
                 WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 100%, transparent), linear-gradient(to bottom, transparent, black 15%, black 100%, transparent), linear-gradient(to left, transparent, black 8%, black 100%, transparent), linear-gradient(to top, transparent, black 15%, black 100%, transparent)',
@@ -148,7 +158,7 @@ export default function Footer() {
               <iframe
                 title="Tech Tuition System Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.123!2d70.2672543!3d21.7556165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3957f3c01797f721%3A0x492c4331111f3759!2sTech%20Tuition%20System%20LLP!5e0!3m2!1sen!2sin!4v1706500000000!5m2!1sen!2sin"
-                className="absolute inset-0 h-full w-full border-0 opacity-60 grayscale invert transition-all duration-700 group-hover/map:scale-103 group-hover/map:opacity-100 group-hover/map:grayscale-0 group-hover/map:invert-0"
+                className="absolute inset-0 h-full w-full p-3 rounded-4xl border-0 opacity-60 grayscale invert transition-all duration-700 group-hover/map:scale-103 group-hover/map:opacity-100 group-hover/map:grayscale-0 group-hover/map:invert-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
