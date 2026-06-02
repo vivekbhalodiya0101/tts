@@ -91,12 +91,17 @@ export default function Footer() {
             <h3 className="mt-6 text-lg font-semibold text-white">Give us a Call</h3>
             <p className=" mt-2 text-md font-thin" style={{ color: 'rgba(180,190,215,0.55)' }}>
               <a href="tel:+919099003103" className="hover:text-white/80 transition-colors duration-300">
-                +91-9099003103
+                (+91) 90990 03103
               </a>
               ,
               <a href="tel:+919099003203" className="hover:text-white/80 transition-colors duration-300">
-                +91-9099003203
+                (+91) 90990 03203
               </a>
+            </p>
+
+            <h3 className="mt-6 text-lg font-semibold text-white">Working Hours</h3>
+            <p className="mt-2 text-md font-thin" style={{ color: 'rgba(180,190,215,0.55)' }}>
+              Mon - Fri: 9:00 AM - 6:00 PM
             </p>
 
             <h3 className="mt-6 text-lg font-semibold text-white">Follow Us</h3>
@@ -121,7 +126,8 @@ export default function Footer() {
               href="mailto:hello@techtuitionsystem.com"
               className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
             >
-              <span className="break-all">hello@techtuitionsystem.com</span>
+              <span className="break-all">hr@techtuitionsystem.com</span>
+              <span className="break-all">support@techtuitionsystem.com</span>
               <HugeiconsIcon
                 icon={ArrowUpRight01Icon}
                 size={18}
