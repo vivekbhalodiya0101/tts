@@ -124,7 +124,7 @@ export default function CTASection() {
             {/* Primary CTA - Mailto link */}
             <Button
               onClick={() =>
-                (window.location.href = 'mailto:hello@techtuitionsystem.com')
+                (window.location.href = 'mailto:hr@techtuitionsystem.com')
               }
               className="group relative h-auto overflow-hidden rounded-full px-6 py-2.5 text-base font-semibold transition-all duration-500"
               style={{
