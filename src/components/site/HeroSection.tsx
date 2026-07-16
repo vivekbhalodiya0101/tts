@@ -412,7 +412,7 @@ export default function HeroSection() {
             className="text-xs uppercase tracking-widest"
             style={{ color: 'rgba(150,155,175,0.4)' }}
           >
-            © {new Date().getFullYear()} Tech Tuition System
+            © 2026 Tech Tuition System LLP™
           </p>
         </div>
       </motion.div>
