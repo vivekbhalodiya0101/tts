@@ -84,14 +84,14 @@ function DottedGrid() {
           ctx.beginPath()
           ctx.arc(x, y, Math.max(0.5, size), 0, Math.PI * 2)
 
-          // Luminate in blue accent color near cursor
+          // Luminate in warm accent color near cursor
           if (hoverIntensity > 0.1) {
-            const r = Math.round(100 + 30 * hoverIntensity)
-            const g = Math.round(120 + 80 * hoverIntensity)
-            const b = 255
+            const r = Math.round(235 + 20 * hoverIntensity)
+            const g = Math.round(165 + 40 * hoverIntensity)
+            const b = Math.round(20 + 30 * hoverIntensity)
             ctx.fillStyle = `rgba(${r},${g},${b},${Math.max(0, opacity)})`
           } else {
-            ctx.fillStyle = `rgba(96, 165, 250,${Math.max(0, baseOpacity)})`
+            ctx.fillStyle = `rgba(245, 158, 11,${Math.max(0, baseOpacity)})`
           }
 
           ctx.fill()
@@ -221,7 +221,7 @@ export default function StatsSection() {
                 }
                 className="group relative h-auto overflow-hidden rounded-full px-6 py-2.5 text-sm font-semibold"
               >
-                <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-blue-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-amber-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 <span className="relative flex items-center gap-2">
                   Let's Talk
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-background text-primary transition-transform duration-300 group-hover:translate-x-0.5">

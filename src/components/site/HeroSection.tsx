@@ -201,12 +201,12 @@ export default function HeroSection() {
       className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-16 pt-32 lg:px-8"
       style={{
         background: `
-          radial-gradient(ellipse 60% 55% at 0% 0%, rgba(219,234,254,0.55) 0%, rgba(191,219,254,0.25) 40%, transparent 75%),
-          radial-gradient(ellipse 70% 60% at 12% 10%, rgba(29,78,216,0.4) 0%, rgba(30,64,175,0.2) 45%, transparent 75%),
-          radial-gradient(ellipse 80% 65% at 25% 22%, rgba(30,58,138,0.35) 0%, rgba(23,37,84,0.18) 40%, transparent 65%),
+          radial-gradient(ellipse 60% 55% at 0% 0%, rgba(254,243,199,0.55) 0%, rgba(253,230,138,0.25) 40%, transparent 75%),
+          radial-gradient(ellipse 70% 60% at 12% 10%, rgba(245,158,11,0.28) 0%, rgba(217,119,6,0.18) 45%, transparent 75%),
+          radial-gradient(ellipse 80% 65% at 25% 22%, rgba(180,83,9,0.22) 0%, rgba(23,37,84,0.18) 40%, transparent 65%),
           radial-gradient(ellipse 90% 70% at 35% 30%, rgba(15,23,42,0.25) 0%, rgba(2,6,23,0.1) 40%, transparent 60%),
           radial-gradient(ellipse 140% 120% at 75% 75%, rgba(2,2,8,1) 0%, rgba(2,2,8,0.98) 55%, transparent 90%),
-          linear-gradient(135deg, rgba(180,190,220,0.5) 0%, rgba(96,165,250,0.4) 10%, rgba(30,64,175,0.35) 18%, rgba(23,37,84,0.3) 28%, rgba(8,10,40,0.9) 42%, rgb(2,2,8) 100%)
+          linear-gradient(135deg, rgba(230,215,170,0.45) 0%, rgba(250,204,21,0.32) 10%, rgba(217,119,6,0.28) 18%, rgba(23,37,84,0.3) 28%, rgba(8,10,40,0.9) 42%, rgb(2,2,8) 100%)
         `,
       }}
     >
@@ -249,7 +249,7 @@ export default function HeroSection() {
                 'linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))',
               border: '1px solid rgba(255,255,255,0.12)',
               boxShadow:
-                'inset 0 1px 0 rgba(255,255,255,0.1), 0 0 20px rgba(37,99,235,0.08)',
+                'inset 0 1px 0 rgba(255,255,255,0.1), 0 0 20px rgba(245,158,11,0.08)',
             }}
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -281,7 +281,7 @@ export default function HeroSection() {
             <span
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(255,255,255,0.95) 20%, rgba(147,197,253,0.7) 50%, rgba(96,165,250,0.55) 80%)',
+                  'linear-gradient(135deg, rgba(255,255,255,0.95) 20%, rgba(253,224,71,0.7) 50%, rgba(250,204,21,0.55) 80%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -321,7 +321,7 @@ export default function HeroSection() {
                 border: 'none',
               }}
             >
-              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-blue-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-amber-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center gap-3">
                 Start a Project
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-primary-foreground transition-transform duration-300 group-hover:translate-x-0.5">

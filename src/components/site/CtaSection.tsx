@@ -11,9 +11,9 @@ export default function CTASection() {
       className="relative overflow-hidden py-32 lg:py-44"
       style={{
         background: `
-          radial-gradient(ellipse 80% 60% at 50% 20%, rgba(38,52,180,0.5) 0%, rgba(24,34,140,0.28) 40%, transparent 65%),
-          radial-gradient(ellipse 60% 50% at 15% 30%, rgba(80,60,220,0.35) 0%, rgba(60,40,180,0.15) 45%, transparent 70%),
-          radial-gradient(ellipse 55% 45% at 85% 25%, rgba(110,60,220,0.25) 0%, rgba(80,40,190,0.1) 45%, transparent 70%),
+          radial-gradient(ellipse 80% 60% at 50% 20%, rgba(245,158,11,0.34) 0%, rgba(217,119,6,0.2) 40%, transparent 65%),
+          radial-gradient(ellipse 60% 50% at 15% 30%, rgba(251,191,36,0.24) 0%, rgba(217,119,6,0.12) 45%, transparent 70%),
+          radial-gradient(ellipse 55% 45% at 85% 25%, rgba(252,211,77,0.18) 0%, rgba(217,119,6,0.1) 45%, transparent 70%),
           radial-gradient(ellipse 70% 50% at 50% 70%, rgba(15, 23, 42,0.45) 0%, rgba(10,15,60,0.25) 50%, transparent 75%),
           linear-gradient(180deg, oklch(0.1 0.025 261) 0%, rgb(6,8,18) 100%)
         `,
@@ -49,7 +49,7 @@ export default function CTASection() {
         className="pointer-events-none absolute left-[15%] top-[20%] h-48 w-48 rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(99,130,255,0.15) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%)',
           filter: 'blur(40px)',
         }}
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
@@ -59,7 +59,7 @@ export default function CTASection() {
         className="pointer-events-none absolute right-[10%] bottom-[25%] h-64 w-64 rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(80,60,220,0.12) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(234,179,8,0.12) 0%, transparent 70%)',
           filter: 'blur(50px)',
         }}
         animate={{ y: [0, 15, 0], x: [0, -12, 0] }}
@@ -69,7 +69,7 @@ export default function CTASection() {
         className="pointer-events-none absolute left-[50%] top-[60%] h-32 w-32 rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(59, 130, 246,0.1) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%)',
           filter: 'blur(30px)',
         }}
         animate={{ y: [0, -15, 0] }}
@@ -132,11 +132,11 @@ export default function CTASection() {
                   'linear-gradient(135deg, rgba(255,255,255,0.96), rgba(230,235,250,1))',
                 color: 'rgb(10,12,30)',
                 boxShadow:
-                  '0 0 40px rgba(99,130,255,0.15), 0 8px 30px rgba(0,0,0,0.3)',
+                  '0 0 40px rgba(245,158,11,0.15), 0 8px 30px rgba(0,0,0,0.3)',
                 border: 'none',
               }}
             >
-              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-blue-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-amber-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center gap-3">
                 Let's Build
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-primary-foreground transition-transform duration-300 group-hover:translate-x-0.5">

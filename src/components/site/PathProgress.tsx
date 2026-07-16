@@ -76,9 +76,9 @@ export default function PathProgress() {
       >
         <defs>
           <linearGradient id="strategyStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="rgba(125, 211, 252, 0.42)" />
-            <stop offset="55%" stopColor="rgba(56, 189, 248, 0.86)" />
-            <stop offset="100%" stopColor="rgba(59, 130, 246, 0.42)" />
+            <stop offset="0%" stopColor="rgba(253, 224, 71, 0.42)" />
+            <stop offset="55%" stopColor="rgba(245, 158, 11, 0.86)" />
+            <stop offset="100%" stopColor="rgba(217, 119, 6, 0.42)" />
           </linearGradient>
         </defs>
         <path
@@ -92,7 +92,7 @@ export default function PathProgress() {
         />
         <circle ref={dotRef} r="7" fill="rgba(239, 246, 255, 0.98)" />
       </svg>
-      <p className="mt-3 max-w-xl text-sm text-blue-100/80">
+      <p className="mt-3 max-w-xl text-sm text-amber-100/80">
         This path mirrors every TTS project sprint, from first brief to launch
         readiness, with transparent checkpoints and shared momentum.
       </p>

@@ -53,7 +53,7 @@ export default function Footer() {
       className="relative overflow-hidden"
       style={{
         background: `
-          radial-gradient(ellipse 60% 40% at 50% 0%, rgba(30,45,140,0.2) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 40% at 50% 0%, rgba(245,158,11,0.16) 0%, transparent 60%),
           oklch(0.1 0.025 261)
         `,
         color: 'rgba(230,235,250,0.92)',
@@ -64,7 +64,7 @@ export default function Footer() {
         className="absolute left-0 right-0 top-0 h-px"
         style={{
           background:
-            'linear-gradient(90deg, transparent, rgba(99,130,255,0.2), transparent)',
+            'linear-gradient(90deg, transparent, rgba(245,158,11,0.2), transparent)',
         }}
       />
 
@@ -263,9 +263,9 @@ export default function Footer() {
                     x2="1"
                     y2="0"
                   >
-                    <stop offset="0%" stopColor="rgba(99,130,255,0.6)" />
-                    <stop offset="50%" stopColor="rgba(96, 165, 250,0.8)" />
-                    <stop offset="100%" stopColor="rgba(80,60,220,0.6)" />
+                    <stop offset="0%" stopColor="rgba(245,158,11,0.6)" />
+                    <stop offset="50%" stopColor="rgba(250, 204, 21,0.8)" />
+                    <stop offset="100%" stopColor="rgba(217,119,6,0.6)" />
                   </linearGradient>
                 </defs>
                 <text
@@ -304,7 +304,7 @@ export default function Footer() {
                     fill: 'none',
                     stroke: `url(#footer-text-glow-${idx})`,
                     strokeWidth: 1.5,
-                    filter: 'drop-shadow(0 0 12px rgba(99,130,255,0.3))',
+                    filter: 'drop-shadow(0 0 12px rgba(245,158,11,0.3))',
                   }}
                 >
                   TECH TUITION SYSTEM LLP
@@ -313,7 +313,7 @@ export default function Footer() {
               {/* Spacer dot between repetitions */}
               <span
                 className="mx-12 flex h-3 w-3 shrink-0 items-center justify-center rounded-full opacity-[0.06] group-hover:opacity-[0.15] transition-[opacity,transform] duration-700 group-hover:scale-150"
-                style={{ background: 'rgba(99,130,255,1)' }}
+                style={{ background: 'rgba(245,158,11,1)' }}
               />
             </span>
           ))}

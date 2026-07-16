@@ -26,7 +26,7 @@ export default function VelocityStrip() {
   const drift = useTransform(smoothVelocity, [-1200, 0, 1200], [-130, 0, 130])
 
   return (
-    <section className="relative overflow-hidden border-y border-slate-900/10 bg-[linear-gradient(180deg,#f8fbff_0%,#edf5ff_100%)] py-5 text-slate-800">
+    <section className="relative overflow-hidden border-y border-slate-900/10 bg-[linear-gradient(180deg,#fffbee_0%,#fef3c7_100%)] py-5 text-slate-800">
       <motion.div
         className="marquee-track flex min-w-max items-center gap-10 text-[11px] font-semibold tracking-[0.28em] uppercase"
         style={{ x: drift }}
@@ -38,7 +38,7 @@ export default function VelocityStrip() {
               className="inline-flex items-center gap-4 opacity-90"
             >
               <span>{item}</span>
-              <span className="h-1 w-1 rounded-full bg-sky-500" />
+              <span className="h-1 w-1 rounded-full bg-amber-500" />
             </span>
           )),
         )}

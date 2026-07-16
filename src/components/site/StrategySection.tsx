@@ -139,7 +139,7 @@ export default function StrategySection() {
       className="relative overflow-hidden py-28 lg:py-40"
       style={{
         background: `
-          radial-gradient(ellipse 70% 50% at 50% 0%, rgba(30,64,175,0.18) 0%, transparent 60%),
+          radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,158,11,0.18) 0%, transparent 60%),
           radial-gradient(ellipse 50% 60% at 100% 50%, rgba(23,37,84,0.12) 0%, transparent 70%),
           linear-gradient(180deg, rgb(6,8,18) 0%, rgb(8,10,22) 100%)
         `,
@@ -201,9 +201,9 @@ export default function StrategySection() {
               style={{
                 height: lineHeight,
                 background:
-                  'linear-gradient(180deg, rgba(59,130,246,0.9) 0%, rgba(29,78,216,0.6) 60%, rgba(30,58,138,0.2) 100%)',
+                  'linear-gradient(180deg, rgba(245,158,11,0.9) 0%, rgba(217,119,6,0.6) 60%, rgba(180,83,9,0.2) 100%)',
                 boxShadow:
-                  '0 0 12px rgba(37,99,235,0.5), 0 0 24px rgba(37,99,235,0.25)',
+                  '0 0 12px rgba(245,158,11,0.5), 0 0 24px rgba(245,158,11,0.25)',
               }}
             />
           </div>
@@ -233,7 +233,7 @@ export default function StrategySection() {
                         marginLeft: -10,
                         marginTop: -10,
                         background:
-                          'radial-gradient(circle, rgba(59,130,246,0.4) 0%, transparent 70%)',
+                          'radial-gradient(circle, rgba(245,158,11,0.4) 0%, transparent 70%)',
                       }}
                       animate={{
                         scale: isActive ? [1, 1.6, 1] : 0,
@@ -250,13 +250,13 @@ export default function StrategySection() {
                       className="relative flex h-6 w-6 items-center justify-center rounded-full border"
                       animate={{
                         background: isActive
-                          ? 'rgba(59,130,246,1)'
+                          ? 'rgba(245,158,11,1)'
                           : 'rgba(20,25,45,1)',
                         borderColor: isActive
-                          ? 'rgba(96,165,250,0.8)'
+                          ? 'rgba(250,204,21,0.8)'
                           : 'rgba(255,255,255,0.15)',
                         boxShadow: isActive
-                          ? '0 0 16px rgba(37,99,235,0.7), 0 0 32px rgba(37,99,235,0.35), inset 0 0 6px rgba(255,255,255,0.4)'
+                          ? '0 0 16px rgba(245,158,11,0.7), 0 0 32px rgba(245,158,11,0.35), inset 0 0 6px rgba(255,255,255,0.4)'
                           : '0 0 0px rgba(0,0,0,0)',
                         scale: isActive ? 1.1 : 1,
                       }}
@@ -285,7 +285,7 @@ export default function StrategySection() {
                         className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em]"
                         animate={{
                           color: isActive
-                            ? 'rgba(96,165,250,0.95)'
+                            ? 'rgba(250,204,21,0.95)'
                             : 'rgba(150,160,180,0.4)',
                         }}
                         transition={{ duration: 0.5 }}
@@ -314,13 +314,13 @@ export default function StrategySection() {
                         }}
                         animate={{
                           color: isActive
-                            ? 'rgb(96,165,250)'
+                            ? 'rgb(250,204,21)'
                             : 'rgba(180,190,215,0.6)',
                           borderColor: isActive
-                            ? 'rgba(59,130,246,0.4)'
+                            ? 'rgba(245,158,11,0.4)'
                             : 'rgba(255,255,255,0.1)',
                           boxShadow: isActive
-                            ? '0 0 24px rgba(37,99,235,0.25), inset 0 0 12px rgba(59,130,246,0.08)'
+                            ? '0 0 24px rgba(245,158,11,0.25), inset 0 0 12px rgba(245,158,11,0.08)'
                             : '0 0 0 rgba(0,0,0,0)',
                         }}
                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -331,7 +331,7 @@ export default function StrategySection() {
                       <div className="min-w-0 flex-1">
                         <span
                           className="font-heading text-[10px] font-semibold uppercase tracking-[0.25em]"
-                          style={{ color: 'rgba(96,165,250,0.7)' }}
+                          style={{ color: 'rgba(250,204,21,0.7)' }}
                         >
                           {step.label}
                         </span>
@@ -364,8 +364,8 @@ export default function StrategySection() {
                             color: 'rgba(190,200,220,0.7)',
                           }}
                           whileHover={{
-                            background: 'rgba(59,130,246,0.1)',
-                            borderColor: 'rgba(59,130,246,0.3)',
+                            background: 'rgba(245,158,11,0.1)',
+                            borderColor: 'rgba(245,158,11,0.3)',
                             color: 'rgba(220,225,245,0.95)',
                             scale: 1.04,
                           }}
@@ -397,7 +397,7 @@ export default function StrategySection() {
             className="h-px w-24 mb-8"
             style={{
               background:
-                'linear-gradient(90deg, transparent, rgba(59,130,246,0.6), transparent)',
+                'linear-gradient(90deg, transparent, rgba(245,158,11,0.6), transparent)',
             }}
           />
           <p

@@ -121,11 +121,11 @@ export default function Header() {
     ? 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))'
     : 'linear-gradient(135deg, rgba(12,16,32,0.14), rgba(12,16,32,0.08))'
   const hoverGlassBg = effectiveDark
-    ? 'linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))'
-    : 'linear-gradient(135deg, rgba(12,16,32,0.16), rgba(12,16,32,0.1))'
+    ? 'linear-gradient(135deg, rgba(250,204,21,0.18), rgba(245,158,11,0.08))'
+    : 'linear-gradient(135deg, rgba(250,204,21,0.2), rgba(245,158,11,0.1))'
   const hoverBorder = effectiveDark
-    ? 'rgba(255,255,255,0.08)'
-    : 'rgba(8,12,28,0.1)'
+    ? 'rgba(250,204,21,0.25)'
+    : 'rgba(245,158,11,0.35)'
 
   return (
     <>
@@ -219,7 +219,7 @@ export default function Header() {
                 border: 'none',
               }}
             >
-              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-[rgba(250,204,21,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center gap-2">
                 Let's Talk
                 <span
@@ -296,12 +296,12 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             />
 
-            {/* Subtle blue glow accent */}
+            {/* Subtle amber glow accent */}
             <div
               className="pointer-events-none absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2"
               style={{
                 background:
-                  'radial-gradient(circle, rgba(99,130,255,0.18), transparent 70%)',
+                  'radial-gradient(circle, rgba(245,158,11,0.18), transparent 70%)',
                 filter: 'blur(40px)',
               }}
             />
@@ -359,11 +359,11 @@ export default function Header() {
                     'linear-gradient(135deg, rgba(255,255,255,0.96), rgba(230,235,250,1))',
                   color: 'rgb(10,12,30)',
                   boxShadow:
-                    '0 0 40px rgba(99,130,255,0.25), 0 8px 30px rgba(0,0,0,0.4)',
+                    '0 0 40px rgba(245,158,11,0.25), 0 8px 30px rgba(0,0,0,0.4)',
                   border: 'none',
                 }}
               >
-                <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-[rgba(250,204,21,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 <span className="relative">Let's Talk</span>
                 <span className="relative inline-flex h-6 w-6 items-center justify-center rounded-full bg-foreground text-background transition-transform duration-300 group-hover:translate-x-0.5">
                   <HugeiconsIcon icon={ArrowRight01Icon} size={14} />

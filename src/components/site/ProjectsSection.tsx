@@ -21,7 +21,7 @@ const projects = [
     description:
       'Full-stack e-commerce platform handling 100K+ daily transactions.',
     type: 'case-study' as const,
-    color: 'from-blue-500/15 to-blue-500/5',
+    color: 'from-amber-500/15 to-amber-500/5',
     span: 'md:col-start-2 md:row-start-1 md:row-span-3',
     image:
       'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80',

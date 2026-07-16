@@ -63,7 +63,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             transition={{ delay: 0.2 }}
           >
             <span
-              className="font-numeric tabular-nums leading-none text-surface-dark-foreground"
+              className="font-numeric tabular-nums leading-none text-accent"
               style={{
                 fontFamily: 'var(--font-numeric)',
                 fontSize: 'clamp(5rem, 18vw, 9rem)',
@@ -74,7 +74,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
               {count}
             </span>
             <span
-              className="text-surface-dark-foreground/40"
+              className="text-accent/55"
               style={{
                 fontFamily: 'var(--font-numeric)',
                 fontSize: 'clamp(1.5rem, 4vw, 3rem)',

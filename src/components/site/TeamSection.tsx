@@ -28,7 +28,7 @@ const team = [
     tagline: 'Vision · Strategy · Direction',
     bio: 'Builds the long arc — turning ambiguous problems into measurable products. 10+ years at the intersection of design and engineering.',
     skills: ['Strategy', 'Product', 'Leadership'],
-    accent: 'from-[oklch(0.7_0.2_245)] to-[oklch(0.45_0.22_245)]',
+    accent: 'from-[oklch(0.88_0.16_100)] to-[oklch(0.7_0.16_86)]',
     index: '01',
     socials: {
       twitter: '#',
@@ -87,7 +87,7 @@ function TeamCard({ member, i }: { member: (typeof team)[number]; i: number }) {
 
   const glowX = useTransform(mx, (v) => `${v * 100}%`)
   const glowY = useTransform(my, (v) => `${v * 100}%`)
-  const glowBg = useMotionTemplate`radial-gradient(420px circle at ${glowX} ${glowY}, oklch(0.546 0.245 245 / 0.14), transparent 60%)`
+  const glowBg = useMotionTemplate`radial-gradient(420px circle at ${glowX} ${glowY}, oklch(0.78 0.17 92 / 0.14), transparent 60%)`
 
   const handleMove = (e: MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current?.getBoundingClientRect()
@@ -252,7 +252,7 @@ function TeamCard({ member, i }: { member: (typeof team)[number]; i: number }) {
                 transition={{ delay: i * 0.12 + 0.3 + idx * 0.06 }}
                 whileHover={{
                   y: -2,
-                  borderColor: 'oklch(0.546 0.245 245 / 0.4)',
+                  borderColor: 'oklch(0.78 0.17 92 / 0.4)',
                 }}
               >
                 {skill}
@@ -322,7 +322,7 @@ function TeamCardHorizontal({ member, i }: { member: (typeof team)[number]; i: n
 
   const glowX = useTransform(mx, (v) => `${v * 100}%`)
   const glowY = useTransform(my, (v) => `${v * 100}%`)
-  const glowBg = useMotionTemplate`radial-gradient(600px circle at ${glowX} ${glowY}, oklch(0.546 0.245 245 / 0.12), transparent 60%)`
+  const glowBg = useMotionTemplate`radial-gradient(600px circle at ${glowX} ${glowY}, oklch(0.78 0.17 92 / 0.12), transparent 60%)`
 
   const handleMove = (e: MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current?.getBoundingClientRect()
@@ -395,7 +395,7 @@ function TeamCardHorizontal({ member, i }: { member: (typeof team)[number]; i: n
                 transition={{ delay: i * 0.12 + 0.3 + idx * 0.06 }}
                 whileHover={{
                   y: -2,
-                  borderColor: 'oklch(0.546 0.245 245 / 0.4)',
+                  borderColor: 'oklch(0.78 0.17 92 / 0.4)',
                 }}
               >
                 {skill}

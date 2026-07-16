@@ -138,7 +138,7 @@ export default function AboutSection() {
             }
             className="group relative h-auto overflow-hidden rounded-full px-6 py-2.5 text-sm font-semibold"
           >
-            <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-blue-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+            <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-amber-400/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             <span className="relative flex items-center gap-2">
               Get in Touch
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-background text-primary transition-transform duration-300 group-hover:translate-x-0.5">

@@ -160,7 +160,7 @@ export default function ServicesSection() {
           marginTop: '-100px',
           marginBottom: '20px',
           backgroundImage:
-            'radial-gradient(circle at 50% 85%, #000000 55%, #3a56f1 75%, hsl(0, 0%, 100%) 95%)',
+            'radial-gradient(circle at 50% 85%, #000000 55%, #f59e0b 75%, hsl(0, 0%, 100%) 95%)',
           maskImage: 'linear-gradient(to bottom, transparent, black 260px)',
           WebkitMaskImage:
             'linear-gradient(to bottom, transparent, black 260px)',
@@ -249,7 +249,7 @@ export default function ServicesSection() {
                 border: 'none',
               }}
             >
-              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="absolute inset-0 -translate-x-full rounded-full bg-linear-to-r from-transparent via-[rgba(250,204,21,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center gap-3">
                 Explore Our Services
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-[11px] text-primary-foreground transition-transform duration-300 group-hover:translate-x-0.5">
@@ -301,12 +301,12 @@ export default function ServicesSection() {
               exit={{ opacity: 0, y: 20, scale: 0.97 }}
               transition={{ duration: 0.45, ease: SMOOTH }}
             >
-              {/* Blue glow top */}
+              {/* Amber glow top */}
               <div
                 className="pointer-events-none absolute -top-24 left-1/2 h-48 w-[120%] -translate-x-1/2"
                 style={{
                   background:
-                    'radial-gradient(ellipse 50% 100% at 50% 100%, rgba(99,130,255,0.22), transparent 70%)',
+                    'radial-gradient(ellipse 50% 100% at 50% 100%, rgba(245,158,11,0.22), transparent 70%)',
                   filter: 'blur(20px)',
                 }}
               />
@@ -330,9 +330,9 @@ export default function ServicesSection() {
                         strokeWidth={1.3}
                         className="absolute inset-0 h-full w-full"
                         style={{
-                          color: 'rgb(99,130,255)',
-                          fill: 'rgba(60,90,230,0.16)',
-                          filter: 'drop-shadow(0 0 12px rgba(99,130,255,0.4))',
+                          color: 'rgb(245,158,11)',
+                          fill: 'rgba(217,119,6,0.16)',
+                          filter: 'drop-shadow(0 0 12px rgba(245,158,11,0.4))',
                         }}
                       />
                       <HugeiconsIcon
@@ -340,7 +340,7 @@ export default function ServicesSection() {
                         size={20}
                         strokeWidth={1.7}
                         className="relative z-10"
-                        style={{ color: 'rgb(220,230,255)' }}
+                        style={{ color: 'rgb(255,243,199)' }}
                       />
                     </span>
                     <div className="min-w-0">
@@ -396,7 +396,7 @@ export default function ServicesSection() {
                         }}
                         className="flex items-center gap-3 rounded-2xl border border-white/6 bg-white/2.5 px-4 py-3 text-sm text-white/75 backdrop-blur-sm transition-colors duration-300 hover:border-white/10 hover:bg-white/4"
                       >
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_8px_rgba(99,130,255,0.6)]" />
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
                         <span className="truncate">{m}</span>
                       </motion.div>
                     ))}
@@ -442,11 +442,11 @@ export default function ServicesSection() {
                       'linear-gradient(135deg, rgba(255,255,255,0.96), rgba(230,235,250,1))',
                     color: 'rgb(10,12,30)',
                     boxShadow:
-                      '0 0 30px rgba(99,130,255,0.15), 0 4px 20px rgba(0,0,0,0.3)',
+                      '0 0 30px rgba(245,158,11,0.15), 0 4px 20px rgba(0,0,0,0.3)',
                     border: 'none',
                   }}
                 >
-                  <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-[rgba(96,165,250,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                  <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-[rgba(250,204,21,0.4)] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   <span className="relative">Discuss This Service</span>
                   <span className="relative inline-flex h-6 w-6 items-center justify-center rounded-full bg-foreground text-[10px] text-background transition-transform duration-300 group-hover:translate-x-0.5">
                     <HugeiconsIcon icon={ArrowRight01Icon} size={14} />
@@ -496,7 +496,7 @@ function ServiceRow({
         transition={{ duration: 0.55, ease: SMOOTH }}
         style={{
           background:
-            'linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)), radial-gradient(ellipse 68% 120% at 18% 50%, rgba(99,130,255,0.1), transparent 68%), radial-gradient(ellipse 68% 120% at 82% 50%, rgba(99,130,255,0.09), transparent 68%)',
+            'linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)), radial-gradient(ellipse 68% 120% at 18% 50%, rgba(245,158,11,0.1), transparent 68%), radial-gradient(ellipse 68% 120% at 82% 50%, rgba(245,158,11,0.09), transparent 68%)',
           border: '1px solid rgba(255,255,255,0.07)',
           backdropFilter: 'blur(20px) saturate(1.16)',
           WebkitBackdropFilter: 'blur(20px) saturate(1.16)',
@@ -527,9 +527,9 @@ function ServiceRow({
                 strokeWidth={1.4}
                 className="absolute inset-0"
                 style={{
-                  color: 'rgb(99,130,255)',
-                  fill: 'rgba(60,90,230,0.18)',
-                  filter: 'drop-shadow(0 0 14px rgba(99,130,255,0.45))',
+                  color: 'rgb(245,158,11)',
+                  fill: 'rgba(217,119,6,0.18)',
+                  filter: 'drop-shadow(0 0 14px rgba(245,158,11,0.45))',
                 }}
               />
               <HugeiconsIcon
@@ -537,7 +537,7 @@ function ServiceRow({
                 size={18}
                 strokeWidth={1.8}
                 className="relative z-10"
-                style={{ color: 'rgb(220,230,255)' }}
+                style={{ color: 'rgb(255,243,199)' }}
               />
             </span>
           </motion.div>
