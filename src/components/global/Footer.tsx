@@ -34,7 +34,6 @@ const linkGroups = [
       { label: 'Contact', href: '#contact' },
       { label: 'Twitter', href: '#' },
       { label: 'LinkedIn', href: '#' },
-      { label: 'GitHub', href: '#' },
     ],
   },
 ]
@@ -123,7 +122,7 @@ export default function Footer() {
           {/* Email + map */}
           <div className="flex w-full flex-col items-center gap-3 lg:w-auto lg:items-end lg:pl-10">
             <a
-              href="mailto:hello@techtuitionsystem.com"
+              href="mailto:hr@techtuitionsystem.com"
               className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
             >
               <span className="break-all">hr@techtuitionsystem.com</span>
@@ -134,7 +133,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="mailto:hello@techtuitionsystem.com"
+              href="mailto:support@techtuitionsystem.com"
               className="group flex flex-wrap items-center gap-2 font-heading text-lg font-semibold text-white transition-colors duration-300 hover:text-accent sm:text-xl lg:text-2xl"
             >
               <span className="break-all">support@techtuitionsystem.com</span>
@@ -202,21 +201,29 @@ export default function Footer() {
         {/* Copyright row */}
         <div className="flex flex-col items-center justify-between gap-3 py-8 sm:flex-row">
           <p className="text-xs" style={{ color: 'rgba(200,210,235,0.2)' }}>
-            © {new Date().getFullYear()} Tech Tuition System LLP. All rights
-            reserved.
+            © 2026 Tech Tuition System LLP™ All rights reserved.
           </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(
-              (link) => (
-                <a
-                  key={link}
-                  href="#"
-                  className="text-xs transition-colors duration-300 hover:text-white/50"
-                  style={{ color: 'rgba(200,210,235,0.2)' }}
-                >
-                  {link}
-                </a>
-              ),
+              (link) => {
+                const href =
+                  link === 'Privacy Policy'
+                    ? '/privacy-policy'
+                    : link === 'Terms of Service'
+                      ? '/terms-of-service'
+                      : '/cookie-policy'
+
+                return (
+                  <a
+                    key={link}
+                    href={href}
+                    className="text-xs transition-colors duration-300 hover:text-white/50"
+                    style={{ color: 'rgba(200,210,235,0.2)' }}
+                  >
+                    {link}
+                  </a>
+                )
+              },
             )}
           </div>
         </div>
